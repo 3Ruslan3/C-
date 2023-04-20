@@ -649,15 +649,298 @@
 
 
 // Задача 23
-
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-Console.Write("Введите число: ");
-int num = Convert.ToInt32((Console.ReadLine()));
+// Console.Write("Введите число: ");
+// int num = Convert.ToInt32((Console.ReadLine()));
 
-for(int i = 1; i <= num; i++){
-    Console.WriteLine(Math.Pow(i, 3));
+// for(int i = 1; i <= num; i++){
+//     Console.WriteLine(Math.Pow(i, 3));
+// }
+
+// int[] numArr = new int[8];
+
+// for(int i=0;i<numArr.Length;i++){
+//     numArr[i] = new Random().Next(0,2);
+//     Console.Write(numArr[i]+",");
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Демонстрация решения
+// Задача 24: Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+
+// Демонстрация решения
+// Задача 24: Напишите программу, которая принимает
+//  на вход число (А) и выдаёт сумму чисел от 1 до А.
+// 7 -> 28
+// 4 -> 10
+// 8 -> 36
+
+
+// Console.WriteLine("Введите число");                         
+// int number = Convert.ToInt32(Console.ReadLine());   
+
+// int GetSumNum()
+// {
+//     int sum =0;
+//     int count =0;
+
+//    while (number>count)
+//    {
+//     count++;
+//     sum+=count;
+//     // sum= sum+count;
+//    }
+
+//     return sum;
+// }
+
+//  Console.WriteLine(GetSumNum());
+
+
+
+
+
+
+
+
+//  Задача 26: Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе.
+// 456 -> 3
+// 78 -> 2
+// 89126 -> 5
+
+
+
+// int countDigits(int a){    int count = 0;    while (a > 0)    {        a /= 10;        count++;    }    return count;}Console.Write("Введите число: ");int n = Convert.ToInt32(Console.ReadLine());Console.WriteLine($"Количество цифр в числе {countDigits(n)}");
+
+
+// Console.WriteLine("Введите число: ");
+// int value = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+
+// while(value != 0)
+// {
+//     count++;
+//     value = value / 10;
+// }
+// Console.WriteLine(count);
+
+
+
+
+
+
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int getNumCount(){
+//     return number.ToString().Length;
+// }
+// Console.WriteLine("Количество цифр в числе: " + getNumCount());
+
+
+
+
+
+
+
+
+// Задача 28: Напишите программу, которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
+// 4 -> 24 
+// 5 -> 120
+
+
+// Console.WriteLine("Введите целое число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int temp = 1;
+
+// for (int i = 1; i<=num; i++)
+// {
+//     temp=temp*i;
+// }
+// Console.WriteLine(temp);
+
+
+
+
+
+
+
+
+
+
+
+// Задача 30: Напишите программу, которая выводит массив из 8 элементов, заполненный нулями и единицами в случайном порядке.
+// [1,0,1,1,0,1,0,0]
+
+
+
+
+
+
+
+
+
+
+
+
+// // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// // 3, 5 -> 243 (3⁵)
+// // 2, 4 -> 16
+
+// Console.WriteLine("Введите целое число A");
+// int numA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите целое число B");
+// int numB = Convert.ToInt32(Console.ReadLine());
+
+// int temp = 0;
+
+// int increseNumberLevel()
+// {
+//     temp = numA;
+//     for(int i = 2; i <= numB; i++){
+//         temp = temp*numA;
+//         // Console.WriteLine("temp = " + temp);
+//     }
+//     return temp;
+// }
+// increseNumberLevel();
+// Console.WriteLine(temp);
+
+// // double temp2 = Math.Pow(numA, numB); //Проверка
+// // Console.WriteLine(temp2);//Проверка
+
+
+
+
+
+
+
+
+
+
+
+
+// // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// // 452 -> 11
+// // 82 -> 10
+// // 9012 -> 12
+
+// Console.WriteLine("Введите целое число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// int temp = 0;
+
+// int GetSumNum(){
+//     while(num != 0){
+//         temp = num % 10;
+//         num = num / 10;
+//         sum = sum + temp;
+//     }
+//     return sum;
+// }
+// GetSumNum();
+// Console.WriteLine(sum);
+
+
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// int[] array = new int[8];
+
+// int[] fillArrayWithNumbers(){
+//     for(int i = 0; i < array.Length; i++){
+//         Console.WriteLine("Введите целое число как элемен массива с индексом " + i);
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void printArray(int[] a){
+//     for(int i = 0; i < a.Length; i++){
+//         Console.Write(a[i] + " ");
+//     }
+// }
+
+// fillArrayWithNumbers();
+// printArray(array);
+
+
+
+
+
+
+
+
+
+
+
+// // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// // 6, 1, 33 -> [6, 1, 33]
+
+// int[] array = new int[8];
+
+// int[] fillArrayWithNumbers(){
+//     for(int i = 0; i < array.Length; i++){
+//         array[i] = new Random().Next(1, 100);
+//     }
+//     return array;
+// }
+
+// void printArray(int[] a){
+//     for(int i = 0; i < a.Length; i++){
+//         Console.Write(a[i] + " ");
+//     }
+// }
+
+// fillArrayWithNumbers();
+// printArray(array);
+
+
+
+
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// // 6, 1, 33 -> [6, 1, 33]
+
+int[] array = new int[8];
+
+int[] fillArrayWithNumbers(){
+    Console.WriteLine("Введите массив из 8 целых чисел, используя как разделитель ',' ");
+        string[] str = Console.ReadLine().Split(new char[] {','});
+
+        Console.WriteLine(String.Join(", ", str) + " это массив символов");
+
+        for (int i = 0; i < str.Length; i++){
+            array[i] = Convert.ToInt32(str[i]);
+        }
+    return array;
 }
+
+fillArrayWithNumbers();
+Console.WriteLine(String.Join(", ", array) + " а это уже массив чисел");
