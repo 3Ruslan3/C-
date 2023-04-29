@@ -1239,18 +1239,519 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] array = new int[] { 1, 2, 3, 4, 5 };
-// int[] array = new int[] { 6, 7, 3, 6 };
+// int[] array = new int[] { 1, 2, 3, 4, 5 };
+// // int[] array = new int[] { 6, 7, 3, 6 };
 
-int[] result = new int[(array.Length / 2) + (array.Length % 2)];
+// int[] result = new int[(array.Length / 2) + (array.Length % 2)];
 
-for (int i = 0; i < result.Length; i++)
+// for (int i = 0; i < result.Length; i++)
+// {
+//     result[i] = array[i] * array[array.Length - 1 - i];
+//     if(i == array.Length - 1 - i){
+//         result[i] = array[array.Length - 1 - i];
+//     }
+// }
+
+// Console.WriteLine(String.Join(",", array));
+// Console.WriteLine(String.Join(",", result));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+
+// Console.WriteLine("Ведите число 1");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Ведите число 2");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Ведите число 3");
+// int num3 = Convert.ToInt32(Console.ReadLine());
+
+// if (num1 < (num2 + num3) && (num2 < (num1 + num3)) && (num3 < (num1 + num2)))
+// {
+//     Console.WriteLine("Такой треугольник существует");
+// }
+// else if ((num1 <= 0) || (num2 <= 0) || (num3 <= 0))
+// {
+//     Console.WriteLine("Некорректный ввод");
+// }
+// else
+// {
+//     Console.WriteLine("Такой треугольник не существует");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// : Напишите программу, которая будет преобразовывать
+//  десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// string result = "";
+
+// while (num > 0)
+// {
+//     result = num % 2 + result;
+//     num = num / 2;
+// }
+// Console.WriteLine(result);
+
+
+
+
+
+
+
+
+
+
+// // Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+// // Если N = 5 -> 0 1 1 2 3
+// // Если N = 3 -> 0 1 1
+// // Если N = 7 -> 0 1 1 2 3 5 8
+
+// Console.WriteLine("Введите число больше 2");
+// int N = Convert.ToInt32(Console.ReadLine());
+// int i=2;
+// if (N>=i)
+// {
+//     int[] fib=new int[N];
+//     fib[0]=0;
+//     fib[1]=1;
+//     Console.Write($"{fib[0]} {fib[1] }");//Console.Write("0 1");
+// while(i<N) //for(int i=2;i<N;i++)
+// {
+//     fib[i]=fib[i-1]+fib[i-2];
+//     Console.Write($" {fib[i]}");
+//     i++;
+// }
+// }
+// else{
+//     Console.WriteLine("Некорректный ввод");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Задача 39: Напишите программу, которая 
+// // перевернёт одномерный массив (последний 
+// // элемент будет на первом месте, а первый - на последнем и т.д.)
+// // [1 2 3 4 5] -> [5 4 3 2 1]
+// // [6 7 3 6] -> [6 3 7 6]
+
+// int[] array = new int[5]{1,2,3,4,5};
+
+// int temp=0;
+// for (int i = 0; i < array.Length/2; i++)
+// {
+//     temp = array[i];
+//     array[i]=array[array.Length-1-i];
+//     array[array.Length-1-i]=temp;
+// }
+
+// Console.WriteLine(String.Join(",",array));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+// Console.WriteLine("Введите числа через запятую и нажмите ввод");
+
+// string[] str = Console.ReadLine().Split(new char[] { ',' });
+
+// int[] array = new int[str.Length];
+
+// for (int i = 0; i < str.Length; i++)
+// {
+//     array[i] = Convert.ToInt32(str[i]);
+// }
+
+// int count = 0;
+
+// for (int j = 0; j < str.Length; j++)
+// {
+//     if (array[j] > 0)
+//     {
+//         count++;
+//     }
+// }
+// Console.WriteLine("ЧИсло положительных чисел = " + count);
+
+
+
+
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+// Console.WriteLine("Введите число b1");
+// int b1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число k1");
+// int k1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число b2");
+// int b2 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число k2");
+// int k2 = Convert.ToInt32(Console.ReadLine());
+
+// double b1 = 2;
+// double k1 = 5;
+// double b2 = 4;
+// double k2 = 9;
+
+// double x = (b2 - b1) / (k1 - k2);
+// double y = k2 * x + b2;
+
+// Console.WriteLine($"({x} ; {y})");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 46: Задайте двумерный массив размером m×n, 
+// заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
+
+// Console.WriteLine("Введите число");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = new int[rows, columns];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = new Random().Next(0, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+
+//     Console.WriteLine();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+
+// Console.WriteLine("Введите число: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число: ");
+// int collumns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = new int[rows,collumns];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i,j] = i + j;
+//         Console.Write(array[i,j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 49: Задайте двумерный массив. Найдите элементы,
+//  у которых оба индекса чётные, и замените эти элементы на их квадраты.
+// Например, изначально массив
+//  выглядел вот так:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+
+// Console.WriteLine("Введите число");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = new int[rows, columns];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = new Random().Next(0, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+
+//     Console.WriteLine();
+// }
+// Console.WriteLine("______");
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         if ((i % 2 == 0) && (j % 2 == 0))
+//         {
+//             array[i, j] = array[i, j] * array[i, j];
+//         }
+
+//         Console.Write(array[i, j] + " ");
+//     }
+
+//     Console.WriteLine();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+
+
+// Console.WriteLine("Введите число");
+// int rows = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = new int[rows, columns];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = new Random().Next(0, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+
+//     Console.WriteLine();
+// }
+// Console.WriteLine("______");
+
+// int sum = 0;
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         if (i == j)
+//         {
+//             sum = sum + array[i, j];
+//         }
+//     }
+// }
+
+// Console.WriteLine("Сумма " + sum);
+
+
+
+
+
+
+
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+// m = 3, n = 4.
+// 0,5 7 -2 -0,2
+// 1 -3,3 8 -9,9
+// 8 7,8 -7,1 9
+
+
+// Console.WriteLine("Введите число m");
+// int m = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Введите число n");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// double[,] array = new double[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = new Random().Next(0, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+
+
+
+
+
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// int m = 3;
+// int n = 4;
+
+// int[,] array = new int[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = new Random().Next(0, 10);
+//         Console.Write(array[i, j] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Введите позицию элемента в массиве, укажите в формате 'строки,ряды'");
+// string[] str = Console.ReadLine().Split(new char[] {','});
+// int x = Convert.ToInt32(str[0]);
+// int y = Convert.ToInt32(str[1]);
+
+// if((x >= 0 && x < array.GetLength(0)) && (y >= 0 && y < array.GetLength(1))){
+//     Console.WriteLine(array[x, y]);
+// }
+// else{
+//     Console.WriteLine("Такого элемента нет");
+// }
+
+
+
+
+
+
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+Console.WriteLine("__________"); // Разделитель
+
+int[,] array = { { 1, 4, 7, 2 }, {5, 9, 2, 3}, {8, 4, 2, 4} };
+
+for (int i = 0; i < array.GetLength(0); i++)
 {
-    result[i] = array[i] * array[array.Length - 1 - i];
-    if(i == array.Length - 1 - i){
-        result[i] = array[array.Length - 1 - i];
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+        // array[i, j] = new Random().Next(0, 10);
+        Console.Write(array[i, j] + " ");
     }
+    Console.WriteLine();
 }
+Console.WriteLine("__________"); // Разделитель
 
-Console.WriteLine(String.Join(",", array));
-Console.WriteLine(String.Join(",", result));
+for (int j = 0; j < array.GetLength(1); j++)
+{
+    double mid = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        mid = mid + array[i, j];
+    }
+    mid = mid / array.GetLength(0);
+    Console.Write($"{Math.Round(mid, 1)} ");
+}
